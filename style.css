@@ -1,0 +1,129 @@
+*{
+	margin:0 auto;
+	padding:0;
+	box-sizing:border-box;
+}
+body{
+	/* display:flex; */
+	/* align-items:center; */
+	justify-content:center;
+	height:100vh;
+	background: radial-gradient(circle, rgba(238,174,202,1) 23%, rgba(148,187,233,1) 100%);
+	
+}
+.Analog_clock{
+	width:500px;
+	height:500px;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background-color:lightgray;
+	position:relative;
+	/* background: radial-gradient(circle, rgba(195,39,107,1) 45%, rgba(112,233,247,1) 100%); */
+    
+     /* z-index:-1; */
+	 border:3px dashed #4dd9fa;
+}
+.Analog_clock::before{
+	content:"";
+	width:525px;
+	height:525px;
+	position:absolute;
+	border-radius:50%;
+	background: radial-gradient(circle, rgba(232,111,164,1) 50%, rgba(112,233,247,1) 100%);
+	box-shadow:0px 0px 15px 15px #4dd9fa;
+	
+}
+.number{
+	position:absolute;
+	text-align:center;
+	transform:rotate(var(--rotation));
+	top:0;
+	font-size:40px;
+	color:#010a06;
+	width:100%;
+	height:100%;
+    /* text-shadow:0px 0px 12px #4dd9fa; */
+
+}
+
+.middle_dot{
+	width:25px;
+	height:25px;
+	background-color:gray;
+	position:absolute;
+	border-radius:50%;
+}
+.hand{
+	position:absolute;
+	left:49%;
+	bottom:50%;
+	transform:translateX(-50%)rotate(calc(var(--rotation)* 1deg));
+	transform-origin:bottom;
+}
+
+.hour_hand1{
+	width:12px;
+	height:130px;
+	background-color:black;
+	border-radius:50% 50% 0 0;
+}
+.min_hand1{
+	width:12px;
+	height:190px;
+	background-color:red;
+	border-radius:50% 50% 0 0;
+}
+.sec_hand1{
+	width:6px;
+	height:200px;
+	background-color:yellow;
+	border-radius:50% 50% 0 0;
+}
+
+.number1{
+	--rotation:30deg;
+}
+.number2{
+	--rotation:60deg;
+}
+
+.number3{
+	--rotation:90deg;
+}
+
+.number4{
+	--rotation:120deg;
+}
+
+.number5{
+	--rotation:150deg;
+}
+
+.number6{
+	--rotation:180deg;
+}
+
+.number7{
+	--rotation:210deg;
+}
+.number8{
+	--rotation:240deg;
+}
+
+.number9{
+	--rotation:270deg;
+}
+
+.number10{
+	--rotation:300deg;
+}
+
+.number11{
+	--rotation:330deg;
+}
+
+.number12{
+	--rotation:360deg;
+}
